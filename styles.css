@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #456;
+}
+
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  background-color: #bbb;
+}
+
+/* Style the input fields */
+input[type=submit] {
+  background-color: #599bc7;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #757575;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#pwdMessage, #idMessage{
+  align-items: center;
+  width: 280px;
+  display:none;
+  background: #cccccc;
+  color: #000;
+  position: relative;
+  margin: -100px auto;
+  padding: 5px 35px;
+}
+
+/* reduce the size of text and header in the password tip message */
+#pwdMessage p, #pwdMessage h3{
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+/* Quality measurement */
+#pwdQuality{ display: inline-block; }
+
+/* Change the color of the password quality bars */
+.hide, .show {
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  border-radius: 3px;
+}
+.hide { background-color: #444; }
+#pwd1.show { background-color: red; }
+#pwd2.show { background-color: orange; }
+#pwd3.show { background-color: rgb(225, 200, 0); }
+#pwd4.show { background-color: rgb(200, 225, 0); }
+#pwd5.show { background-color: green; }
+
+/* Change color when the requirements are (wrong / right) */
+.invalid { border-color:rgb(131, 25, 25); color: rgb(131, 25, 25); }
+.valid { border-color:rgb(0, 100, 0); color: rgb(0, 100, 0); }
+
+/* Change mark (x / ✔) when requirements are (wrong / right) */
+p.invalid:before {
+  position: relative;
+  left: -15px;
+  content: "✖";
+}
+p.valid:before {
+  position: relative;
+  left: -15px;
+  content: "✔";
+}
+
+
+
