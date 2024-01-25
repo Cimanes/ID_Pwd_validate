@@ -13,12 +13,13 @@
 <body>
   <h3>Password & ID Validation</h3>
   <p>User / ID / Password entry template</p>
-  <div class="container">
-    <form action="/action_page.php">
+    <form action="/" method="get" class="form" name="form_1" id="form_1" autocomplete="on">
       <label for="user">Username</label>
       <input type="text" id="user" name="user" required>
+      
       <label for="idNum">ID number </label>
       <input type="text" class="invalid" id="idNum" pattern="(\d){8}(-?)([A-Za-z]){1}|([X-Zx-z]){1}(-?)(\d){7}(-?)([A-Za-z]){1}" maxlength="11" title="Spanish ID or NIE format" required>
+      
       <label for="pwd" id="pwdLabel">Password: </label>
       <div class="hide" id="pwd1"></div>
       <div  class="hide" id="pwd2"></div>
@@ -27,20 +28,22 @@
       <div class="hide" id="pwd5"></div>
       <p id="pwdQuality"></p>
       <input type="password" class="invalid" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+\-]).{8,}" title="At least one number, one uppercase letter, one lowercase letter, one symbol and 8 or more characters" required>
+
       <input type="submit" value="Submit">
     </form>
-  </div>
-  <div id="idMessage">
-    <p id="idOK" class="invalid"><b>Spanish ID / NIE format</b></p>
-  </div>
-  <div id="pwdMessage">
-    <h3>Password must contain:</h3>
-    <p id="lower" class="invalid">One or more <b>lowercase</b> letters</p>
-    <p id="upper" class="invalid">One or more <b>capital (uppercase)</b> letters</p>
-    <p id="number" class="invalid">One or more <b>numbers</b></p>
-    <p id="symbol" class="invalid">One or more <b>symbols</b> (!@#$%^&*_=+-)</p>
-    <p id="length" class="invalid">More than <b>8 characters</b></p>
-  </div>
+
+    <div id="idMessage">
+      <p id="idOK" class="invalid"><b>format: Spanish ID / NIE</b></p>
+    </div>
+    
+    <div id="pwdMessage">
+      <h3>Password must contain:</h3>
+      <p id="lower" class="invalid">One or more <b>lowercase</b> letters</p>
+      <p id="upper" class="invalid">One or more <b>capital (uppercase)</b> letters</p>
+      <p id="number" class="invalid">One or more <b>numbers</b></p>
+      <p id="symbol" class="invalid">One or more <b>symbols</b> (!@#$%^&*_=+-)</p>
+      <p id="length" class="invalid">More than <b>8 characters</b></p>
+    </div>
 
 <!-- OPTIONAL: Uncomment one script below to choose (with or without D3) -->
 <!-- <script src="script.js"></script> -->

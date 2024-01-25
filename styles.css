@@ -21,10 +21,11 @@ input[type=submit] {
   color: white;
 }
 
-/* Style the container for inputs */
-.container {
+/* Style the sections */
+form {
   background-color: #757575;
   padding: 20px;
+  border-radius: 2%;
 }
 
 /* The message box is shown when the user clicks on the password field */

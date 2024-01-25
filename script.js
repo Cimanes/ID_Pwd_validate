@@ -18,6 +18,12 @@ idIn.onkeyup =  function() {
 }
 
 // Click on the password field => show the message box:
+idIn.onfocus = function() { idTip.style.display = "block"; }
+
+// Click outside of the password field => hide the message box:
+idIn.onblur = function() { idTip.style.display = "none"; }
+
+// Click on the password field => show the message box:
 pwdIn.onfocus = function() { pwdTip.style.display = "block"; }
 
 // Click outside of the password field => hide the message box:
